@@ -1,12 +1,7 @@
-extern double InA;
-extern double InB;
-extern double OutA;
-extern double OutB;
+extern double RTE_ReadA(void);
+extern double RTE_ReadB(void);
+extern void RTE_WriteA(double value);
+extern void RTE_WriteB(double value);
 
-#define RTE_ReadA() ((InA))
-#define RTE_ReadB() ((InB))
-#define RTE_WriteA(x) ((OutA = (x)))
-#define RTE_WriteB(x) ((OutB = (x)))
-
-void InitRunnable(void);
-void CyclicRunnable(void);
+extern void InitRunnable(void);
+extern void CyclicRunnable(void);
