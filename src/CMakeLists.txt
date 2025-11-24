@@ -1,6 +1,7 @@
 # library/modules config
 add_subdirectory(module1)
 add_subdirectory(module2)
+add_subdirectory(module3)
 add_subdirectory(InputWrapper)
 add_subdirectory(OutputWrapper)
 
@@ -22,5 +23,6 @@ target_link_libraries(MyAswProject
 PUBLIC
 module1
 module2
+module3
 InputWrapper
 OutputWrapper)

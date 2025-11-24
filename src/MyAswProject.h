@@ -2,6 +2,7 @@
 #include "OutputWrapper.h"
 #include "module1.h"
 #include "module2.h"
+#include "module3.h"
 
 // input output structures for modules
 extern InputWrapperOutputs Out_InputWrapper;
@@ -10,6 +11,8 @@ extern Module1Inputs In_Module1;
 extern Module1Outputs Out_Module1;
 extern Module2Inputs In_Module2;
 extern Module2Outputs Out_Module2;
+extern Module3Inputs In_Module3;
+extern Module3Outputs Out_Module3;
 
 // module call functions to get the respective inputs and call with correct
 // arguments
@@ -18,6 +21,8 @@ void CallInputWrapper(void);
 void CallModule1(void);
 
 void CallModule2(void);
+
+void CallModule3(void);
 
 void CallOutputWrapper(void);
 

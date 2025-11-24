@@ -7,6 +7,9 @@ Module1Inputs In_Module1 = {};
 Module1Outputs Out_Module1 = {};
 Module2Inputs In_Module2 = {};
 Module2Outputs Out_Module2 = {};
+Module3Inputs In_Module3 = {};
+Module3Outputs Out_Module3 = {};
+
 
 // module call functions to get the respective inputs and call with correct
 // arguments
@@ -24,9 +27,15 @@ void CallModule2(void) {
   CyclicModule2(In_Module2, &Out_Module2);
 }
 
+void CallModule3(void) {
+  In_Module3.a = Out_Module2.a;
+  In_Module3.b = Out_Module2.b;
+  CyclicModule3(In_Module3, &Out_Module3);
+}
+
 void CallOutputWrapper(void) {
-  In_OutputWrapper.a = Out_Module2.a;
-  In_OutputWrapper.b = Out_Module2.b;
+  In_OutputWrapper.a = Out_Module3.a;
+  In_OutputWrapper.b = Out_Module3.b;
   CyclicOutputWrapper(In_OutputWrapper);
 }
 
@@ -36,6 +45,7 @@ void InitRunnable(void) {
   InitInputWrapper(&Out_InputWrapper);
   InitModule1((Module1Inputs){}, &Out_Module1);
   InitModule2((Module2Inputs){}, &Out_Module2);
+  InitModule3((Module3Inputs){}, &Out_Module3);
   InitOutputWrapper((OutputWrapperInputs){});
 }
 
@@ -44,5 +54,6 @@ void CyclicRunnable(void) {
   CallInputWrapper();
   CallModule1();
   CallModule2();
+  CallModule3();
   CallOutputWrapper();
 }

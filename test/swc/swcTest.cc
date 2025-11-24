@@ -13,6 +13,6 @@ TEST(swc, Passthrough) {
   EXPECT_EQ(0, OutB);
 
   CyclicRunnable();
-  EXPECT_EQ(2, OutA);
-  EXPECT_EQ(3, OutB);
+  EXPECT_EQ(-3, OutA);
+  EXPECT_EQ(-2, OutB);
 }
