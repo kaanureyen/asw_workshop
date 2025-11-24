@@ -8,6 +8,11 @@ PUBLIC
 ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+target_include_directories(swcTests
+PRIVATE
+${CMAKE_SOURCE_DIR}/include/RTE
+)
+
 # here we're linking the project library and gtest framework to the test target
 target_link_libraries(swcTests
 PRIVATE
