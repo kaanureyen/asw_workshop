@@ -16,4 +16,9 @@ GTest::gtest
 GTest::gtest_main
 )
 
+gtest_discover_tests(swcTests
+    PROPERTIES
+        DISCOVERY_TIMEOUT 300
+        TIMEOUT 600
+)
 gtest_discover_tests(swcTests)

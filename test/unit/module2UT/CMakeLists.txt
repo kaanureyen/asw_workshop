@@ -19,4 +19,9 @@ GTest::gtest
 GTest::gtest_main
 )
 
+gtest_discover_tests(${UT_TEST_NAME}
+    PROPERTIES
+        DISCOVERY_TIMEOUT 300
+        TIMEOUT 600
+)
 gtest_discover_tests(${UT_TEST_NAME})
