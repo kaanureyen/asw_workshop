@@ -1,4 +1,8 @@
-#include "MyAswProject.h"
+#include "InputWrapper.h"
+#include "OutputWrapper.h"
+#include "module1.h"
+#include "module2.h"
+#include "module3.h"
 
 // input output structures for modules
 InputWrapperOutputs Out_InputWrapper = {};

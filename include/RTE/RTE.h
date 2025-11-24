@@ -7,3 +7,6 @@ extern double OutB;
 #define RTE_ReadB() ((InB))
 #define RTE_WriteA(x) ((OutA = (x)))
 #define RTE_WriteB(x) ((OutB = (x)))
+
+void InitRunnable(void);
+void CyclicRunnable(void);

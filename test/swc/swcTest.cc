@@ -1,8 +1,8 @@
-#include "RTEMock.cc"
 #include "gtest/gtest.h"
 
 extern "C" {
-#include "MyAswProject.h"
+#include "RTE.h"
+#include "RTEMock.c"
 }
 
 TEST(swc, Passthrough) {
